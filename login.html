@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Welcome to Farm app</title>
+    <link rel="stylesheet" type="text/css" href="res/boots/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="res/boots/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/newjquery.js"></script>
+</head>
+
+<body><body>
+        <div class="navbar navbar-inverse">
+            <h2><img src="img/logo_1.PNG" width="80" height="50" class="blink">
+            Market Farm</h2>
+        </div>
+        <div class="container panel">
+            <div><span class="username">Username: </span></div>
+            <div><span class="date">Date: </span></div>
+            <div><span class="status">Status: </span></div>
+            <div><span class="time">Time: </span></div>
+        </div>
+        
+                
+                <div class="container">
+                    <hr>
+                    <form method="post">
+                        <div class="form-group">
+                            <label class="control-label" for="email">
+                                Email
+                            </label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </div>
+                                <input class="form-control" id="email" name="email" type="email" required=""/>
+                            </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email">
+                                Password
+                            </label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-lock"></span>
+                                </div>
+                                <input class="form-control" id="pass" name="password" type="password" required=""/>
+                            </div>
+                        </div>
+                            <input type="submit" class="btn btn-success form-control  center-block col-lg-12" id="btnloginto" value="Login">
+                             <b><p id="loginmessage">Data here...</p></b>
+                            </div>
+                    </form>
+                    <button class="btn btn-warning form-control center-block" id="btnloginback">Back</button>
+                    <hr>
+                
+                
+                <div class="jumbotron">
+                    <h4>Adverts Here.......</h4>
+                </div>
+                </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="jquery/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="boots/js/bootstrap.js"></script>
+        <script type="text/javascript" src="boots/js/bootstrap.min.js"></script>
+    </body>
+</html>
